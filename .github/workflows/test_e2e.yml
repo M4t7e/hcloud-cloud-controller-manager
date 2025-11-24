@@ -33,7 +33,7 @@ jobs:
       CERT_DOMAIN: hc-integrations-test.de
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - uses: actions/setup-go@v6
         with:
@@ -52,9 +52,9 @@ jobs:
             helm
             kubectl
             skaffold
-          helm: v3.19.1 # renovate: datasource=github-releases depName=helm/helm
+          helm: v3.19.2 # renovate: datasource=github-releases depName=helm/helm
           kubectl: v1.34.1 # renovate: datasource=github-releases depName=kubernetes/kubernetes
-          skaffold: v2.16.1 # renovate: datasource=github-releases depName=GoogleContainerTools/skaffold
+          skaffold: v2.17.0 # renovate: datasource=github-releases depName=GoogleContainerTools/skaffold
 
       - name: Setup k3sup
         env:
@@ -150,7 +150,7 @@ jobs:
       ROBOT_ENABLED: "true"
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - uses: actions/setup-go@v6
         with:
@@ -169,9 +169,9 @@ jobs:
             helm
             kubectl
             skaffold
-          helm: v3.19.1 # renovate: datasource=github-releases depName=helm/helm
+          helm: v3.19.2 # renovate: datasource=github-releases depName=helm/helm
           kubectl: v1.34.1 # renovate: datasource=github-releases depName=kubernetes/kubernetes
-          skaffold: v2.16.1 # renovate: datasource=github-releases depName=GoogleContainerTools/skaffold
+          skaffold: v2.17.0 # renovate: datasource=github-releases depName=GoogleContainerTools/skaffold
 
       - name: Install k3sup
         run: |
